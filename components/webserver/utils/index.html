@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>ESP32 Management AP</title>
+    <title>Administrar AP</title>
     <style>
         body {
             width: fit-content;
@@ -22,23 +22,23 @@
     </style>
 </head>
 <body onLoad="getStatus()">
-    <h1>ESP32 Wi-Fi Penetration Tool</h1>
+    <h1>Auditoria Wi-Fi</h1>
     <section id="errors"></section>
-    <section id="loading">Loading... Please wait</section>
+    <section id="loading">Cargando... Por favor espera</section>
     <section id="ready" style="display: none;">
-        <h2>Attack configuration</h2>
+        <h2>Configuracion Ataque</h2>
         <form onSubmit="runAttack(); return false;">
             <fieldset>
-                <legend>Select target</legend>
+                <legend>Selecciona Objetivo</legend>
                 <table id="ap-list"></table>
                 <p>
-                    <button type="button" onClick="refreshAps()">Refresh</button>
+                    <button type="button" onClick="refreshAps()">Refrescar</button>
                 </p>
             </fieldset>
             <fieldset>
-                <legend>Attack configuration</legend>
+                <legend>Configuracion Ataque</legend>
                 <p>
-                    <label for="attack_type">Attack type:</label>
+                    <label for="attack_type">Tipo de Ataque:</label>
                     <select id="attack_type" onChange="updateConfigurableFields(this)" required>
                         <option value="0" title="This type is not implemented yet." disabled>ATTACK_TYPE_PASSIVE</option>
                         <option value="1">ATTACK_TYPE_HANDSHAKE</option>
